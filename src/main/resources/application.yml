@@ -1,0 +1,22 @@
+
+spring:
+  profiles: prod
+name: prod-YAML
+environment: production
+
+
+jpa:
+  generate-ddl: false
+  show-sql: false
+  properties:
+    hibernate:
+      ddl-auto: create
+      dialect: com.codefish.model.hibernate.h
+      generate_statistics: false
+      show_sql: false
+      use_sql_comments: false
+      format_sql: true
+      cache:
+        use_second_level_cache: true
+        use_query_cache: false
+        region.factory_class: com.eddress.config.RegionFactory
